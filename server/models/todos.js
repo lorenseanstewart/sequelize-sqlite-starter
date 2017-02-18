@@ -8,7 +8,10 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       allowNull: false
     },
-    task: DataTypes.STRING,
+    task: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     urgency: {
       type: DataTypes.ENUM('high', 'medium', 'low'),
       allowNull: true

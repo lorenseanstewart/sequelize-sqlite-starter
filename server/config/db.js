@@ -2,13 +2,14 @@
 
 const Sequelize = require('sequelize');
 const env = require('./env');
-const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {
-  host: env.DATABASE_HOST,
+const sequelize = new Sequelize(env.DATABASE, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {
   dialect: env.DATABASE_DIALECT,
+  storage: env.DATABASE_STORAGE,
   define: {
     underscored: true
   }
 });
+console.log(env)
 
 // Connect all the models/tables in the database to a db object,
 //so everything is accessible via one object
@@ -21,6 +22,6 @@ db.sequelize = sequelize;
 db.todos = require('../models/todos.js')(sequelize, Sequelize);
 
 //Relations
-// (no relations with only one table
+// (no relations with only one table)
 
 module.exports = db;

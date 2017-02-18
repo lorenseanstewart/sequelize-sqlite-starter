@@ -1,0 +1,22 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "Code for use in Codemore workshops",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Loren Stewart",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "4.14.0",
+    "morgan": "1.7.0",
+    "sequelize": "3.24.3",
+    "sequelize-cli": "2.4.0",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "1.10.2"
+  }
+}

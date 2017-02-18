@@ -1,5 +1,3 @@
-##Migrations
-
 To get started:
 
 - cd into `/server`

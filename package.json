@@ -4,7 +4,7 @@
   "description": "Code for use in Codemore workshops",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "Loren Stewart",
   "license": "ISC",

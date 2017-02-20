@@ -9,7 +9,6 @@ const sequelize = new Sequelize(env.DATABASE, env.DATABASE_USERNAME, env.DATABAS
     underscored: true
   }
 });
-console.log(env)
 
 // Connect all the models/tables in the database to a db object,
 //so everything is accessible via one object

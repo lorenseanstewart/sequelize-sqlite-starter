@@ -4,7 +4,9 @@ module.exports = (app, db) => {
 
   // GET all todos
   app.get('/todos', (req, res) => {
-    db.todos.findAll()
+    db.todos.findAll({
+      order: 'id DESC'
+    })
       .then(todos => {
         res.json(todos);
       });
@@ -34,6 +36,7 @@ module.exports = (app, db) => {
 
   // POST single todo
   app.post('/todo', (req, res) => {
+    console.log(req.body)
     const task = req.body.task;
     const urgency = req.body.urgency ? req.body.urgency : 'low';
     db.todos.create({
